@@ -215,9 +215,8 @@ var Slider = React.createClass({
     var trackTwoLength = sliderLength - trackOneLength - trackThreeLength;
     var trackTwoStyle = twoMarkers ? selectedStyle : unselectedStyle;
     var Marker = this.props.customMarker;
-    var {top, slipDisplacement, height, width, borderRadius} = this.props.touchDimensions;
+    var {slipDisplacement, height, width, borderRadius} = this.props.touchDimensions;
     var touchStyle = {
-      top: top || -10,
       height: height,
       width: width,
       borderRadius: borderRadius || 0
@@ -276,9 +275,11 @@ var styles = StyleSheet.create({
   },
   fullTrack: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
   track: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   touch: {
     justifyContent: 'center',
